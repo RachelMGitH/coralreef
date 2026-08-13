@@ -1,8 +1,7 @@
 
-reef <- initialize_reef (size)
-initialize_reef <- function(size){
+initialize_reef <- function(coral_numbers){
   reef <- matrix(0,nrow=5,ncol=5)
-  random_cells <- sample(1:25, size)
+  random_cells <- sample(1:25, size = coral_numbers)
   for (rc in random_cells){
  rc_row <- (rc - 1) %/% 5 + 1 
  rc_col <- (rc - 1) %% 5 + 1 
@@ -10,5 +9,3 @@ initialize_reef <- function(size){
  }
   return(reef)
 }
-initialize_reef (8)
-initialize_reef (10)
