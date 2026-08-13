@@ -57,30 +57,13 @@ for (t in 2:length(years)) {
         
         # STEP 8: Determine coral's fate
         
-        # Roll 2d6 for this coral
-        coral_outcome <- sum(sample(1:6, size=2, replace = TRUE))
-        # Fill in the conditions below for mortality and survival
-        # Update the reef accordingly
-        if (coral_outcome <=3) {
-          # Mortality
-          print("Coral died")
-          # Update the reef
-          reef[r,c] <- 0
-        } else {
-          # Survival
-          print("Coral survived")
-          # Update the reef
-          reef[r,c] <- 1
-        }
-      }
-    }
-  }
-  print(paste("year:", years[t]))
-  print(reef)
+  growth
+        print(paste("year:",years[t]))
+        print(reef)
 
   # STEP 9: Update coral_cover_pct
   coral_cover_pct[t] <- mean(reef)
-}
+      }
 coral_cover_pct
 # When correct, your code will produce this result for the coral cover percent:
 #  [1] 0.32 0.32 0.32 0.32 0.32 0.32 0.24 0.20 0.16 0.08 0.08
